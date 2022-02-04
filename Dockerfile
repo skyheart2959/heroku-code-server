@@ -13,4 +13,5 @@
 FROM nixos/nix
 RUN nix-env -i code-server
 RUN mkdir coder
-RUN code-server --auth password --bind-addr 0.0.0.0:8080 coder/
+RUN export PASSWORD="$PASSWORD"
+RUN code-server --auth password --bind-addr 0.0.0.0:$PORT coder/
