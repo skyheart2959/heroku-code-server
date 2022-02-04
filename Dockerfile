@@ -11,6 +11,6 @@
 #CMD bash /home/coder/run.sh ; /usr/local/bin/code-server --host 0.0.0.0 --port $PORT /home/coder
 
 FROM nixos/nix
-RUN nix-env -iA nixos.code-server
+RUN nix-env -i code-server
 RUN mkdir coder
 RUN code-server --auth password --bind-addr 0.0.0.0:8080 coder/
