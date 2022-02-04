@@ -13,5 +13,5 @@
 FROM nixos/nix
 RUN nix-env -i code-server
 RUN mkdir coder
-EXPORT PASSWORD="$PASSWORD"
+RUN export PASSWORD="$PASSWORD"
 RUN code-server --auth password --host 0.0.0.0 --port $PORT coder/
