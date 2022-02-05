@@ -8,7 +8,7 @@ RUN code-server --install-extension formulahendry.code-runner --force
 COPY run.sh /home/coder
 RUN mkdir -p /home/coder/.vscode
 COPY sftp.json /home/coder/.vscode
-CMD bash /home/coder/run.sh ; /usr/local/bin/code-server --host 0.0.0.0 --port $PORT /home/coder
+CMD bash /home/coder/run.sh ; /usr/local/bin/code-server --host 0.0.0.0 --port 8080 /home/coder
 
 #FROM nixos/nix
 #RUN nix-env -i code-server
